@@ -54,10 +54,10 @@ let isArrayLengthEven = (numbers) => {
 
 let addLailaToArray = (instructors) => {
   instructors.push("Laila");
-  console.log(instructors); 
+  return instructors;
 };
 
-addLailaToArray(["Mishary", "Hassan"]);
+console.log(addLailaToArray(["Mishary", "Hassan"]));
 
 
 
@@ -72,13 +72,12 @@ addLailaToArray(["Mishary", "Hassan"]);
  */
 
 let teams = ["Brazil","Germany","Italy"];
+
 let eliminateTeam = (teams) => {
 let removedteam = teams.pop("Italy");
-
-console.log(teams);
-console.log(removedteam);
+return removedteam;
 };
-eliminateTeam(teams);
+console.log(eliminateTeam(teams));
 
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
@@ -94,16 +93,14 @@ eliminateTeam(teams);
  
 let secondHalfOfArrayIfItIsEven = (fruits) => {
  if (fruits.length%2 === 0){
-    console.log(fruits.slice(fruits.length/2));
-
-    return (fruits.slice);
+    return fruits.slice(fruits.length/2);
   }
   {
-    console.log([]);
+    return [];
   }
 };
-secondHalfOfArrayIfItIsEven (["apple","orange","banana","kiwi","blueberry"]);
-secondHalfOfArrayIfItIsEven (["apple","orange","banana","kiwi"]);
+console.log(secondHalfOfArrayIfItIsEven (["apple","orange","banana","kiwi","blueberry"]));
+console.log(secondHalfOfArrayIfItIsEven (["apple","orange","banana","kiwi"]));
 /**
  * youGottaCalmDown(shout):
  * - receives a string `shout`
@@ -119,22 +116,29 @@ secondHalfOfArrayIfItIsEven (["apple","orange","banana","kiwi"]);
  * - Use string method .endsWith()
  */
 
-let youGottaCalmDown = (shout) => {
+//let youGottaCalmDown = (shout) => {
 
-  if (shout.endsWith("!") === true) {
-    let x = shout.indexOf("!");
-    return console.log(`${shout.slice(0,x)}!`);
-  }
-  {
-    return console.log(shout);
-  }
+  //if (shout.endsWith("!") === true) {
+    //let x = shout.indexOf("!");
+    //return console.log(`${shout.slice(0,x)}!`);
+  //}
+  //{
+    //return console.log(shout);
+  //}
+//};
+
+let youGottaCalmDown = (shout) => {
+while (shout.endsWith("!!")){
+  shout = shout.slice(0,-1);
+}{
+return shout;
+}
 };
 
 
-
-youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!");
-youGottaCalmDown("HI!!!!!!!!!!");
-youGottaCalmDown("Hellooooo");
+console.log(youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!"));
+console.log(youGottaCalmDown("HI!!!!!!!!!!"));
+console.log(youGottaCalmDown("Hellooooo"));
 
 module.exports = {
   isArrayLengthOdd,
